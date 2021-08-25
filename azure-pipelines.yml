@@ -18,7 +18,7 @@ steps:
   inputs:
       command: custom
       customCommand: 'run lint'
-  displayName: Run ESLint
+  displayName: 'Run ESLint'
 
 - script: |
     npm install
