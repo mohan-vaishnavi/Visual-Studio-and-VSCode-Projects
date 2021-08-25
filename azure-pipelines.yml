@@ -19,11 +19,9 @@ steps:
     command: custom
     customCommand: 'run lint'
   displayName: 'Run ESLint'
-  continueOnError: true
+  continueOnError: True
 
 - script: |
     npm install
-    npm run lint
-    npm run lint -- --fix
     npm run build
   displayName: 'npm install and build'
