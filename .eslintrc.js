@@ -20,7 +20,11 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
+<<<<<<< HEAD
   
+=======
+  'indentation': 0
+>>>>>>> 4c46d668700e04d52602bbaa81fed50ce4b239c2
 
   }
 }
