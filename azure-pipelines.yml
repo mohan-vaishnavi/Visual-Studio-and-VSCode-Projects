@@ -28,3 +28,9 @@ steps:
     customCommand: 'run lint'
   displayName: 'Run ESLint'
   
+- task: Npm@1
+  inputs:
+    command: custom
+    customCommand: 'run lint:fix'
+  displayName: 'Fix ESLint'
+  
