@@ -1,27 +1,26 @@
-
-export function Clock(props) {
+// eslint-disable-next-line no-use-before-define
+import React from 'react'
+export function Clock (props) {
 // create a date object
-    
-    var date = new Date();
-    var updatingDate = date;
 
-    // use setInterval JS API to update the clock every second
-    setInterval ( () =>
-    {
-        updatingDate = new Date();
-    }, 1000);
-    //render it
+  const date = new Date()
+  let updatingDate = date
 
-    return(
-        
+  // use setInterval JS API to update the clock every second
+  setInterval(() => {
+    updatingDate = new Date()
+  }, 1000)
+  // render it
+
+  return (
+
         <div>
             This is static clock
             <h2> it is {date.toLocaleTimeString() }</h2>
             This is updating clock
             <h2> it is {updatingDate.toLocaleTimeString() }</h2>
         </div>
-    );
-
+  )
 }
 
 /*

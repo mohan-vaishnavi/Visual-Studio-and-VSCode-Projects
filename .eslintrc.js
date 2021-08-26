@@ -20,7 +20,7 @@ module.exports = {
     '@typescript-eslint'
   ],
   rules: {
-  'indentation': 4
+  
 
   }
 }
