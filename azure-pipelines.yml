@@ -14,14 +14,18 @@ steps:
   inputs:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
-- task: Npm@1
-  inputs:
-    command: custom
-    customCommand: 'run lint'
-  displayName: 'Run ESLint'
-  continueOnError: true
+
+# install npm packages first according to dev deps of the project
+# this ensures eslint gets installed, then run lint
 
 - script: |
     npm install
     npm run build
   displayName: 'npm install and build'
+
+- task: Npm@1
+  inputs:
+    command: custom
+    customCommand: 'npm run lint'
+  displayName: 'Run ESLint'
+  
